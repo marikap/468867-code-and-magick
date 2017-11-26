@@ -5,7 +5,7 @@ window.renderStatistics = function (ctx, names, times) {
   var initialX = 150;
   var indent = 90;
   var initialY = 240;
-  var lineWitdth = 40;
+  var lineWidth = 40;
   var histogramHeigth = -150;
 
   var drawResultField = function () {
@@ -21,11 +21,11 @@ window.renderStatistics = function (ctx, names, times) {
     ctx.fillStyle = '#000';
     ctx.font = '16px PT Mono';
 
-    ctx.fillText('Ура вы победили!', 120, 40);
+    ctx.fillText('Ура, вы победили!', 120, 40);
     ctx.fillText('Список результатов:', 120, 60);
   };
 
-  var getMaxElement = function () {
+  var getMaxElement = function(array) {
     var maxTime = -1;
     for (var i = 0; i < times.length; i++) { // ищем максимальный элемент
       var time = times[i];
@@ -46,7 +46,7 @@ window.renderStatistics = function (ctx, names, times) {
     var step = getStep();
     for (var i = 0; i < times.length; i++) { // имена, время, столбики
       ctx.fillStyle = names[i] === 'Вы' ? 'red' : 'rgba(0, 0, 255, ' + getRandomValue(0.3, 1) + ')';
-      ctx.fillRect(initialX + indent * i, initialY, lineWitdth, times[i] * step);
+      ctx.fillRect(initialX + indent * i, initialY, lineWidth, times[i] * step);
       ctx.fillStyle = 'black';
       ctx.fillText(names[i], initialX + indent * i, initialY + barHeigth);
       ctx.fillText(Math.floor(times[i]), initialX + indent * i, histogramHeigth + initialY - barHeigth / 2);
