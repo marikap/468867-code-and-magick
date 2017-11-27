@@ -26,15 +26,15 @@ window.renderStatistics = function (ctx, names, times) {
   };
 
   var getMaxElement = function(array) {
-    var maxTime = -1;
-    for (var i = 0; i < times.length; i++) { // ищем максимальный элемент
-      var time = times[i];
+   var maxTime = -1;
+    for (var i = 0; i < array.length; i++) {  // ищет максимальный элемент
+      var time = array[i];
       if (time > maxTime) {
         maxTime = time;
       }
     }
     return maxTime;
-  };
+};
 
   var getStep = function () {
     var maxTime = getMaxElement();
