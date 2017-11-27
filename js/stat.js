@@ -37,7 +37,7 @@ window.renderStatistics = function (ctx, names, times) {
 };
 
   var getStep = function () {
-    var maxTime = getMaxElement();
+    var maxTime = getMaxElement(times);
     var step = histogramHeigth / maxTime; // пропорции
     return step;
   };
