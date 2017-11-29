@@ -25,26 +25,26 @@ window.renderStatistics = function (ctx, names, times) {
     ctx.fillText('Список результатов:', 120, 60);
   };
 
-  var getMaxElement = function(array) {
-   var maxTime = -1;
-    for (var i = 0; i < array.length; i++) {  // ищет максимальный элемент
+  var getMaxElement = function (array) {
+    var maxTime = -1;
+    for (var i = 0; i < array.length; i++) {
       var time = array[i];
       if (time > maxTime) {
         maxTime = time;
       }
     }
     return maxTime;
-};
+  };
 
   var getStep = function () {
     var maxTime = getMaxElement(times);
-    var step = histogramHeigth / maxTime; // пропорции  
+    var step = histogramHeigth / maxTime;
     return step;
   };
 
   var drawResultColumns = function () {
     var step = getStep();
-    for (var i = 0; i < times.length; i++) { // имена, время, столбики
+    for (var i = 0; i < times.length; i++) {
       ctx.fillStyle = names[i] === 'Вы' ? 'red' : 'rgba(0, 0, 255, ' + getRandomValue(0.3, 1) + ')';
       ctx.fillRect(initialX + indent * i, initialY, lineWidth, times[i] * step);
       ctx.fillStyle = 'black';
