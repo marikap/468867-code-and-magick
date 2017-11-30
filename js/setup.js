@@ -36,13 +36,14 @@ var coatColor = [
 var eyesColor = [
   'black',
   'red',
+  'blue',
   'yellow',
   'green'
 ];
 
 var getRandom = function (randomMassive) {
   var randomValue = Math.floor(Math.random() * randomMassive.length);
-  return (randomMassive[randomValue]);
+  return randomMassive[randomValue];
 };
 
 var similarListElement = document.querySelector('.setup-similar-list');
