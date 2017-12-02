@@ -25,11 +25,6 @@ window.renderStatistics = function (ctx, names, times) {
     ctx.fillText('Список результатов:', 120, 60);
   };
 
-<<<<<<< HEAD
-=======
-// Максимальный элемент
-
->>>>>>> 2609c0eab1fa9fc90b31b2f33676d4d850fe3dcf
   var getMaxElement = function (array) {
     var maxTime = -1;
     for (var i = 0; i < array.length; i++) {

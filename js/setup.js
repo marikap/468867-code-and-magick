@@ -112,8 +112,6 @@ var defineEyesColor = function () {
   return EyesColor[Math.floor(Math.random() * EyesColor.length)];
 };
 
-<<<<<<< HEAD
-=======
 var renderWizard = function () {
   var wizardElement = similarWizardTemplate.cloneNode(true);
   wizardElement.querySelector('.setup-similar-label').textContent = wizardsAll[i].name;
