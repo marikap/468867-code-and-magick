@@ -9,7 +9,7 @@ var setup = document.querySelector('.setup');
 var setupOpen = document.querySelector('.setup-open');
 var setupClose = setup.querySelector('.setup-close');
 
-var onPopupEscPress = function(evt) {
+var onPopupEscPress = function (evt) {
   if (evt.keyCode === ESC_KEYCODE) {
     closePopup();
   }
@@ -17,33 +17,33 @@ var onPopupEscPress = function(evt) {
 
 // Функции открытия-закрытия
 
-var openPopup = function() {
+var openPopup = function () {
   setup.classList.remove('hidden');
   document.addEventListener('keydown', onPopupEscPress);
 };
 
-var closePopup = function() {
+var closePopup = function () {
   setup.classList.add('hidden');
   document.removeEventListener('keydown', onPopupEscPress);
 };
 
 // События
 
-setupOpen.addEventListener('click', function() {
+setupOpen.addEventListener('click', function () {
   openPopup();
 });
 
-setupOpen.addEventListener('keydown', function(evt) {
+setupOpen.addEventListener('keydown', function (evt) {
   if (evt.keyCode === ENTER_KEYCODE) {
     openPopup();
   }
 });
 
-setupClose.addEventListener('click', function() {
+setupClose.addEventListener('click', function () {
   closePopup();
 });
 
-setupClose.addEventListener('keydown', function(evt) {
+setupClose.addEventListener('keydown', function (evt) {
   if (evt.keyCode === ENTER_KEYCODE) {
     closePopup();
   }
@@ -107,15 +107,6 @@ var randomCoatColor = function () {
 var defineEyesColor = function () {
   var EyesColor = ['black', 'red', 'blue', 'yellow', 'green'];
   return EyesColor[Math.floor(Math.random() * EyesColor.length)];
-};
-
-
-var renderWizard = function () {
-  var wizardElement = similarWizardTemplate.cloneNode(true);
-  wizardElement.querySelector('.setup-similar-label').textContent = wizardsAll[i].name;
-  wizardElement.querySelector('.wizard-coat').style.fill = wizardsAll[i].coatColor;
-  wizardElement.querySelector('.wizard-eyes').style.fill = wizardsAll[i].eyesColor;
-  return wizardElement;
 };
 
 var wizardAttributes = document.querySelector('.setup-wizard');
