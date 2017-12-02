@@ -120,7 +120,6 @@ var renderWizard = function () {
   return wizardElement;
 };
 
->>>>>>> 2609c0eab1fa9fc90b31b2f33676d4d850fe3dcf
 var wizardAttributes = document.querySelector('.setup-wizard');
 var wizardCoat = wizardAttributes.querySelector('.wizard-coat');
 var wizardEyes = wizardAttributes.querySelector('.wizard-eyes');
