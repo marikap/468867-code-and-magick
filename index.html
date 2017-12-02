@@ -67,13 +67,20 @@
 </header>
 
 <div class="overlay setup hidden">
-  <form class="setup-wizard-form">
+  <form class="setup-wizard-form"
+		method="post"
+        enctype="multipart/form-data"
+        action="https://js.dump.academy/code-and-magick"
+        autocomplete="off">
+
 
     <div class="setup-title">
       <div class="setup-user">
         <img class="setup-user-pic" src="./img/user-1.jpg"/>
         <label>
-          <input type="text" class="setup-user-name" value="Синий Пендальф" required minlength="2" maxlength="50" />
+         <input type="text" name="username"
+                 minlength="2" maxlength="25" required
+                 class="setup-user-name" value="Синий Пендальф"/>
         </label>
       </div>
 
