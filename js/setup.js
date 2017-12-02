@@ -54,6 +54,9 @@ userDialog.classList.remove('hidden');
 
 // Изменение характеристик персонажа
 
+var userDialog = document.querySelector(' .setup');
+userDialog.classList.remove('hidden');
+
 var wizardsNames = [
   'Иван',
   'Хуан Себастьян',
@@ -108,7 +111,6 @@ var defineEyesColor = function () {
   var EyesColor = ['black', 'red', 'blue', 'yellow', 'green'];
   return EyesColor[Math.floor(Math.random() * EyesColor.length)];
 };
-
 
 var renderWizard = function () {
   var wizardElement = similarWizardTemplate.cloneNode(true);
