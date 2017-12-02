@@ -54,6 +54,9 @@ userDialog.classList.remove('hidden');
 
 // Изменение характеристик персонажа
 
+var userDialog = document.querySelector(' .setup');
+userDialog.classList.remove('hidden');
+
 var wizardsNames = [
   'Иван',
   'Хуан Себастьян',
@@ -109,6 +112,17 @@ var defineEyesColor = function () {
   return EyesColor[Math.floor(Math.random() * EyesColor.length)];
 };
 
+<<<<<<< HEAD
+=======
+var renderWizard = function () {
+  var wizardElement = similarWizardTemplate.cloneNode(true);
+  wizardElement.querySelector('.setup-similar-label').textContent = wizardsAll[i].name;
+  wizardElement.querySelector('.wizard-coat').style.fill = wizardsAll[i].coatColor;
+  wizardElement.querySelector('.wizard-eyes').style.fill = wizardsAll[i].eyesColor;
+  return wizardElement;
+};
+
+>>>>>>> 2609c0eab1fa9fc90b31b2f33676d4d850fe3dcf
 var wizardAttributes = document.querySelector('.setup-wizard');
 var wizardCoat = wizardAttributes.querySelector('.wizard-coat');
 var wizardEyes = wizardAttributes.querySelector('.wizard-eyes');
