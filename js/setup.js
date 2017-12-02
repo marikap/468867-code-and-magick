@@ -15,7 +15,7 @@ var onPopupEscPress = function(evt) {
   }
 };
 
-// Функции открытия-закрытия окна
+// Функции открытия-закрытия
 
 var openPopup = function() {
   setup.classList.remove('hidden');
