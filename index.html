@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Mono&subset=latin,cyrillic">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <title>Код и Магия</title>
 </head>
 <body>
@@ -63,30 +62,29 @@
   <div class="demo"></div>
 
   <div class="setup-open">
-    <img src="./img/user-1.jpg" class="setup-open-icon">
+    <img src="./img/user-1.jpg" class="setup-open-icon" tabindex="0">
   </div>
 </header>
 
 <div class="overlay setup hidden">
   <form class="setup-wizard-form"
-        method="post"
+		method="post"
         enctype="multipart/form-data"
+        action="https://js.dump.academy/code-and-magick"
         autocomplete="off">
+
 
     <div class="setup-title">
       <div class="setup-user">
-        <div class="upload">
-          <img class="setup-user-pic" src="./img/user-1.jpg"/>
-          <input type="file" name="avatar">
-        </div>
+        <img class="setup-user-pic" src="./img/user-1.jpg"/>
         <label>
-          <input type="text" name="username"
-                 maxlength="25" required
+         <input type="text" name="username"
+                 minlength="2" maxlength="25" required
                  class="setup-user-name" value="Синий Пендальф"/>
         </label>
       </div>
 
-      <span class="setup-close">&times;</span>
+      <span class="setup-close" tabindex="0">&times;</span>
     </div>
 
 
@@ -108,20 +106,17 @@
         <div class="setup-wizard-wrap">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 86" class="setup-wizard">
             <g class="wizard">
-              <use xlink:href="#wizard-coat" class="wizard-coat" style="fill: #6589a4"></use>
-              <use xlink:href="#wizard-head" class="wizard-head"></use>
-              <use xlink:href="#wizard-eyes" class="wizard-eyes"></use>
+              <use xlink:href="#wizard-coat"  class="wizard-coat" style="fill: #6589a4"></use>
+              <use xlink:href="#wizard-head"  class="wizard-head"></use>
+              <use xlink:href="#wizard-eyes"  class="wizard-eyes"></use>
               <use xlink:href="#wizard-hands" class="wizard-hands"></use>
             </g>
           </svg>
         </div>
-        <input type="hidden" name="coat-color" value="rgb(101, 137, 164)">
-        <input type="hidden" name="eyes-color" value="black">
       </div>
 
       <div class="setup-fireball-wrap">
         <div class="setup-fireball"></div>
-        <input type="hidden" name="fireball-color" value="#ee4830">
       </div>
 
       <div class="setup-artifacts" dropzone="move">
