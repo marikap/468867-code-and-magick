@@ -93,12 +93,6 @@ var eyesColor = [
   'green'
 ];
 
-var randomName = function () {
-  var firstName = ['Иван', 'Хуан Себастьян', 'Мария', 'Кристоф', 'Виктор', 'Юлия', 'Люпита', 'Вашингтон'];
-  var secondName = ['да Марья', 'Верон', 'Мирабелла', 'Вальц', 'Онопко', 'Топольницкая', 'Нионго', 'Ирвинг'];
-  return firstName[Math.floor(Math.random() * firstName.length)] + ' ' + secondName[Math.floor(Math.random() * secondName.length)].toString();
-};
-
 var randomCoatColor = function () {
   var defineCoatColor = ['rgb(101, 137, 164)', 'rgb(241, 43, 107)', 'rgb(146, 100, 161)', 'rgb(56, 159, 117)', 'rgb(215, 210, 55)', 'rgb(0, 0, 0)'];
   return defineCoatColor[Math.floor(Math.random() * defineCoatColor.length)];
